@@ -1,4 +1,34 @@
+import 'dart:io';
+
+import '../src/icon/config_reader.dart';
+import '../src/icon/icon_font_class_parser.dart';
+import '../src/icon/icon_font_gen_config.dart';
+import '../src/icon/icon_gen.dart';
+import '../src/res/help_test.dart';
+
+String kVersion = '0.0.3';
+
 void main(List<String> arguments) {
+  if (arguments.isEmpty) {
+    print(getHelpText());
+    return;
+  }
+
+  String cmd = arguments.first;
+  if (cmd == '-V' || cmd == '--version') {
+    print('toly version: $kVersion');
+    return;
+  }
+
+  if (cmd == '-H' || cmd == '--help') {
+    print('toly version: $kVersion');
+    return;
+  }
+  if (cmd == 'icon') {
+    const IconGen().gen();
+    return;
+  }
+
   int sum = 0;
   String msg = '';
   for (int i = 0; i < arguments.length; i++) {
