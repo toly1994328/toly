@@ -1,8 +1,3 @@
-import 'dart:io';
-
-import '../src/icon/config_reader.dart';
-import '../src/icon/icon_font_class_parser.dart';
-import '../src/icon/icon_font_gen_config.dart';
 import '../src/icon/icon_gen.dart';
 import '../src/res/help_test.dart';
 
@@ -21,7 +16,7 @@ void main(List<String> arguments) {
   }
 
   if (cmd == '-H' || cmd == '--help') {
-    print('toly version: $kVersion');
+    print(getHelpText());
     return;
   }
   if (cmd == 'icon') {

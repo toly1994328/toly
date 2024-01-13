@@ -7,7 +7,7 @@ input::  toly 1 2 3 4
 output:: 1+2+3+4=10
 ```
 
-#### 0.0.2
+#### 0.0.3
 
 - support icon gen
 
